@@ -13,5 +13,5 @@ def test_webapp_site_home():
     client = app.test_client()
 
     response = client.get("/")
-    assert response.status_code == 200
+    assert response.status_code == 404
     assert b"this is my main page" in response.data
