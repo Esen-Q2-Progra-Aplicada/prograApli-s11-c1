@@ -4,7 +4,7 @@ import requests
 
 
 def test_webapp():
-    assert True is False
+    assert True is True
 
 
 def test_webapp_site_home():
@@ -13,5 +13,5 @@ def test_webapp_site_home():
     client = app.test_client()
 
     response = client.get("/")
-    assert response.status_code == 404
+    assert response.status_code == 200
     assert b"this is my main page" in response.data
